@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./ai-express
+    container_name: nexus-ai-backend
+    env_file:
+      - ./ai-express/.env
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: nexus-ai-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

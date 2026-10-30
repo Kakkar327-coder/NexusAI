@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment Variables
+.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Build Outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# Uploads & Temp Files
+ai-express/uploads/*
+!ai-express/uploads/.gitkeep
+uploads/*
+!uploads/.gitkeep
+
+# System & IDE
+.DS_Store
+**/.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+**/*.log
